@@ -51,7 +51,7 @@ java first 		--> execute first class in java source file
 	System.out.println("Hello world ");
 
 - System 	: Class 
-- out 	: Object
+- out 		: Object
 - println	: method inside out
 
 - If any class in source file declared as public then file name should be same as class name
