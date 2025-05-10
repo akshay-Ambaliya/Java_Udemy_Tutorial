@@ -1,0 +1,84 @@
+JDK : Java development kit
+	It will have compiler,development tool and java runtime environment
+
+JRE : Java Runtime Environment
+	Java Programs are executed in JRE
+	Part of JDK
+	Contains Java Class Library and JVM
+	
+JVM : Java Virutal Machine
+	JVM resposible to execute java program
+	Part of JRE
+
+
+
+javac: Is an Compiler use to compile an java source file
+	 Part of JDK
+	 Generate .class File 
+	
+java: Executer use to execute an java .class file which is an byte code of an program
+
+for example :
+	we have file name as "first.java"
+
+javac first.java 	--> generate "first.class" file
+java first 		--> execute first class in java source file
+
+
+
+
+* Skeleton of Java Program *
+
+- Every java program is in the form of a java 
+
+- main method : 
+
+		public static void main(String args[]) {
+
+		}
+
+- main method must be public
+- main method must be static
+- main method should not return anything 
+- main method must take parameter which is known as Command Line Argument
+	It is optional at the time of passing it
+
+
+- print statement : 
+
+	System.out.println("Hello world ");
+
+- System 	: Class 
+- out 	: Object
+- println	: method inside out
+
+- If any class in source file declared as public then file name should be same as class name
+- If we don't declare main method as above then we will find runtime exception (1)
+
+* How to read Data from the Keyboard *
+
+- Java Provides a class called Scanner used to take input from diffrent type of sources
+- Scanner is Availabel in util package
+- Some important Methods of Scanner Class 
+
+	nextInt();
+	nextFloat();
+	nextDouble();
+	next();
+	nextLine();
+	nextByte();
+	nextShort();
+	nextLong();
+	nextBoolean();
+	hasNextInt();
+	hasNextFloat();
+
+
+Errors : 
+
+1) Main method not found in class first, please define main method as : public static void main(String args[]) 
+	
+
+	
+
+
