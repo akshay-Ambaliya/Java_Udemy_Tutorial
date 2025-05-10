@@ -1,3 +1,5 @@
+/* All the Notes If Section 1 - Introduction */
+
 JDK : Java development kit
 	It will have compiler,development tool and java runtime environment
 
