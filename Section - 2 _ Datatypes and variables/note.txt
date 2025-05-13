@@ -1,0 +1,93 @@
+
+Datatypes   : Every Variables and expression in java has some type 
+            : Primitive Datatypes 
+            --> byte    --> (Integral , Numeric)
+            --> short   --> (Integral , Numeric)
+            --> int     --> (Integral , Numeric)
+            --> long    --> (Integral , Numeric)
+            --> float   --> (Floating Point , Numeric)
+            --> double  --> (Floating Point , Numeric)
+            --> char    --> (Non - Numeric)
+            --> boolean --> (Non - Numeric)
+        
+
+byte : 
+    size    : 1
+    range   : -128 to 127
+    default : 0
+
+short : 
+    size    : 2
+    range   : -32768 to 32767
+    default : 0
+
+int : 
+    size    : 4
+    range   : -2147483648 to 2147483647
+    default : 0
+
+long : 
+    size    : 8
+    range   : -
+    default : 0
+
+float : 
+    size    : 4
+    range   : +-3.4E-38 to +-3.4E+38 
+    default : 0.0f
+
+double : 
+    size    : 8
+    range   : +-1.7E-308 to +-1.7E+308
+    default : 0.0d
+
+char : 
+    size    : 2
+    range   : 0 to 65535
+    default : '\u0000'
+
+boolean : 
+    size    : ?
+    range   : true/false
+    default : false
+
+
+Variables   : Names given to the data
+            : Use for storing data
+            : Must have some data type
+            : Local Variablesmust be intialized before use
+            : Rules to create an Variables
+                1. Case Sensitive
+                2. Contains Alphabets,Numbers,_ or $
+                3. Starts with Alphabets,_ or $
+                4. Should not be a keyword
+                5. Should not be a class name, If class is in use
+                6. No limit on length of name
+                7. Follow Camel Case
+
+
+Literals    : Any constant value that can be assign to the variable is called Literals
+            : Three ways to assign integral value to the variable
+                1. Decimal literal [base = 10]      ==> int x = 10;
+                2. Octal literal [base = 8]         ==> int x = 010;
+                3. Hexa Deciaml Literal [base = 16] ==> int x = 0x10;
+                4. Binary Literal [base = 2]        ==> int x = 0b10;
+
+            : Any value with decimal point is double by default 
+            : We can use underscrore '_' with any integral literal
+            : But underscore can't be at begining or at the end
+
+Datatypes Variables : 
+    MSB : Most Significant bits
+          First bit that represent whether the data is positive on negative
+           0 -> positive
+           1 -> negative
+
+           Negative numbers are stored in 2's compliment form 
+
+
+
+
+    
+
+            
