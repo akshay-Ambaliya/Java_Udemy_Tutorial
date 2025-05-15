@@ -1,0 +1,72 @@
+
+Arithmetic Operator : 
+                --> +   /   *   -   %
+                --> Perform upon any type of data except boolean
+                --> Higher Precedence : /   *   %
+                --> Lower Precedence : +    -
+                --> Highest Precedence : ()
+
+                --> Result type of expression : 
+                --> byte    +   byte    =   int
+                --> short   +   short   =   int
+                --> byte    +   short   =   int
+                --> int     +   byte    =   int
+                --> int     +   short   =   int
+                --> int     +   float   =   float
+                --> long    +   float   =   float
+                --> char    +   short   =   int
+                --> char    +   int     =   int
+                --> float   +   double  =   double
+                --> long    +   double  =   double
+
+
+Increment Operator :
+                --> post++ , post--
+                --> ++pre  , --pre
+                --> pre : first incremented/decremented then utilized 
+                --> post : first utilized then incremented/decremented
+
+Bitwise Operator : 
+                --> &  : AND
+                --> |  : OR 
+                --> ~  : NOT 
+                --> ^  : XOR
+                --> >> : Right Shift > shift bytes right side
+                       : Divide number by pow(2,k)
+                --> << : Left Shift > shift bytes left side
+                       : Multiply number by pow(2,k)
+                --> >>> : Unsigned Right Shift >
+
+                Merging :                       Masking : 
+                    A = 00000010                    A = 01001000
+                    B = 01001000                    B = 00001000
+                  A|B = 01001010                  A&B = 00001000
+
+                Mergin means checking whether the bit is on or off
+                4bit : nibble
+
+                We can store two numbers in single variable
+
+                Swapping : 
+                  We can swap two numbers with the help of XOR operator
+
+Widening & Narrowing / Type Casting
+
+    2 Types are there
+        1. Implicit
+        2. Explicit
+    
+    1) Implicit
+        - Smaller to bigger datatype
+        - Done by compiler
+        - Widening or up-Casting
+        - No loss of information
+
+    2) Explicit
+        - Bigger to Smaller datatype
+        - Done by Programmer
+        - Narrowing or down-Casting
+        - Loss of information
+
+
+
