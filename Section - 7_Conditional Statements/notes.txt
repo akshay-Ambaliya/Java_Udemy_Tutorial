@@ -1,0 +1,14 @@
+ Relational Operator :> To check conditional Statement
+ Logical Operatror :> To combine more conditional Statement
+
+ Conditional Statement : 
+    set of statements execited based on conditional value
+
+Switch-case : 
+
+    - Branch & control statement
+    - Depending upon value it will execute according case
+    - If we don't provide breaqk it will execute following cases
+    - allowed datatypes are byte,short,int,char,string
+    - if-else will check every conditions until satisfies that's whhy if-else is slower
+    - useful for developing menu-driven programs
