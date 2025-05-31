@@ -1,0 +1,83 @@
+
+Pricnciples of OOPs : 
+    1. Absraction - Hiding internal , unnecessary details and showing only required freatures
+    2. Encapsulation - Encapsulating features and properties of object
+    3. Inheritance - Use of already developed product (Specialization) 
+    4. Polymorphism - Refering to many thing just by single name
+
+Class vs Object : 
+    Class : design / blueprint of object
+            befines property & behaviour of object
+
+    eg : 
+    Television : 
+        Properties  - channel
+                    - volume
+                    - color
+                    - size
+                    - price
+
+        Behaviour / Features :
+                    - changeChannel()
+                    - changeVolume()
+
+    
+    Property : Data Members Of Class
+    Behaviour : methods/features of an class
+
+    How to create class: 
+
+        class Television{
+            private int channel;
+            private int volume;
+            public void changeChannel(){
+
+            }
+            public void changeVolume(){
+                
+            }
+        }
+
+
+    Object : Instance of an class
+
+    How to create Object : 
+
+        Television tv = new Television();
+
+        stored in--> 
+
+        channel :   Heap
+        volume  :   Heap
+        tv      :   Stack
+        changeChannel : Method area
+        changeVolume  : Method 
+        
+    --> For avery class seperate .class file will be generated
+    --> If Object class have toString method then we can directly print object of that class usinf reference only.
+
+Data Hiding :
+
+    - Hiding unnecessary details
+    - achieved using getter and setter methods.
+
+    Types of properties : 
+        Readable and Writable --> We can write getter and setter methods
+        Read only --> we can write only getter method
+        Write Only --> we can write setter only (Rarely used)
+
+Constructor : 
+
+--> Method of class automatically called at the time of object creation 
+--> Every class have one default Constructor
+--> If we create one then default will be removed
+--> usually public but can be private
+--> Have same name as class name
+--> return nothing
+--> It can be overloaded we can create as many as want 
+--> Types of Constructor
+        1) default Constructor
+        2) user -defined
+            i) Parameterized
+            ii) None-Pramaterized
+
