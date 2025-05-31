@@ -1,0 +1,45 @@
+
+What are Methods : 
+    methods are the members of the classes which provide functionality for the class
+    eg : 
+        length();
+        substring();
+        indexOf();
+        equals();
+
+How to write methods : 
+    //Signature
+    returntype methodName (Parameter List){
+        .....
+    }
+
+main method can only call static method and member
+ 
+
+Parameter Passing : (Call by Value) 
+    - when method is called respective the parameters are copied, respective parameters are copied
+        and a method will have its own copy of variable.
+    - changes made in formal parameter is not reflected on actual parameter
+    - but in the case of object, object reference is copied to formal parameter
+    - actual object is also modified at the time of object Passing
+    - Terminologies : 
+        1. Method Call
+        2. Called Mathod
+        3. Caller
+        4. Parameter/arguments
+        5. Actual Parameter
+        6. Formal Parameter
+
+Method Overloading : 
+    - means having more than one method with same name
+    - It can be differ in parameter,return type,number of parameter
+    - compiler will call the method based on parameters
+
+Variable Arguments / Var-args
+    - int ... x
+    - we can pass any number of parameter of same type
+    - we can even pass 0 arguments
+    - must be the last 
+
+Recursive Method : 
+    - When method calls itself the it is called recursive method
