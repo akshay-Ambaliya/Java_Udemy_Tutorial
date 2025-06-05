@@ -1,0 +1,37 @@
+
+static keyword:
+   used with :
+      1) static variable
+      2) static methods
+      3) static nested class
+      4) static blocks
+
+
+Static : 
+    - used to represent meta data
+    - belongs to a class and they can be shared by all the objects of the class 
+    - can be use as a shared data 
+    - can be accessed just by class name 
+    - stored in the method area 
+    - static method can access only static data member
+
+Static Block :
+    - Is it used to initialise static data member
+    - It is executed before the main method at the time of class loading
+
+
+final keyword :
+      used with :
+      1) final variable : can't change its value
+      2) final methods : can't be override
+      3) final class : can't be extended
+      
+Final : 
+    - Value assigned to the variable are fixed, cannot be modified 
+    - Should be written in Capital letters
+    - Final method cannot be overriden 
+    - A final class cannot be extended
+
+Singleton class : 
+    - A class which can create only one object is called singleton class.
+    - In Singleton class getInstance() mwthod is used

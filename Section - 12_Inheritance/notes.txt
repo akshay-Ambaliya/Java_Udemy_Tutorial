@@ -1,0 +1,54 @@
+
+Generalization : 
+    - More than one entity refers by single name
+    - 'Is a' relationship between two entity
+    - Bottom-up uproach
+    
+Specialization :
+    - Uses of already developed product 
+    - Top-down approach
+
+Inheritance in Java :
+    - Inheriting properties of parent class by child class
+    Eg : Circle (Parent class, Super Class)
+         Cylinder (Sub class,Child class)
+        
+    Eg : Account (Parent class)
+         Saving A/C (Child Class)
+         Loan A/C (2nd Child Class)
+
+Constructor in Inheritance :
+    - When we create object of child class then constructor of paren class is called first (non-parameterized)
+    - When we want to call parameterized constructor from child class then super keyword should be used 
+        But ,It must be first line in constructor
+
+This vs Super :
+    This : 
+    - this is a reference to current object 
+    - to avoid name conflict b/w properties & parameter this keyword can be used 
+
+    Super :
+    - Super is a reference to parent class
+    - used to access member of parent class
+
+
+Method Overloading : redefining method of superclass in sub class
+ 
+
+Dynamic Method Dispatch:
+    Super s = new Sub();
+    - we can have a super class reference and sub class object 
+    - but sub class reference can't have super class object
+    - we can't call new method defined in sub class using super class reference
+    - Method are called depending upon object
+    - Super class reference holding an object of Sub class and calling overrided method.
+        Is known as Dynamic Method Dispatch 
+
+    - Note That method is always be called based upon object , not upon class reference
+
+
+Key Points to remember while overriding
+    - both method must have similar Signature
+    - we can't override static and final methods 
+    - Overloading : Compile Time Polymorphism
+    - Overriding : Run Time Polymorphism

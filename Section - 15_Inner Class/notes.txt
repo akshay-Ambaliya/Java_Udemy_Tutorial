@@ -1,0 +1,29 @@
+
+Inner Class :   
+    -   Inner class is a class inside class
+    -   Inner class can access member of outer class
+    -   outer class cannot access member of inner class
+    -   But outer class can access member of innder class using object 
+    
+How to create object of inner class : 
+
+    Outer.Inner i = new Outer().new Inner();
+
+How .class file is created 
+
+    Outer --> Outer.class
+    Inner --> Outer$Inner.class
+
+Types : 
+    1. Nested Inner class
+        - Class Inside Class
+
+    2. Local Inner class
+        - Class Inside Method 
+        - Accessible Inside Method only
+        
+    3. Anonymous Inner Class
+        - Class without name 
+
+    4. Static Inner class
+        - Static inner class can access the member of outer class but only static member

@@ -1,0 +1,27 @@
+
+ 
+Two types of Class : 
+    1. Abstract class : 
+        -   abstract keyword is used
+        -   we can not create object of abstract class
+        -   we can declare reference of abstract class 
+        -   If class is having abstract method then is must be declared as abstract
+        -   But Abstract class may not have abstract method
+        -   If some class is inheriting abstract class then it must override all of its methods, else it become abstract class
+    
+    2. Concrete class
+        -   not any keyword is used
+        -   we can create object of concrete class
+        
+
+Abstract Method : 
+        - Method which is not having a body is known as Abstract method, the method must be declared as abstract
+        - The abstract method is undefined method
+
+
+Key Point To remember : 
+    1.  An abstract class can't be final because if it made final then it cannot be extended whereas abstract class is meant for inheritance
+    2.  An abstract method can't be final because if it made final then it can't be overriden whereas Absract method is meant for overriding
+    3.  Abstract class and method can neither be final nor static
+    4.  A Sub classs must override an abstract method or else it will become abstract class.
+    

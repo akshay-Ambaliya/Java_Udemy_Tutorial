@@ -1,0 +1,28 @@
+
+Interfaces : 
+     abstract class test{
+        abstract public void meth1();
+        abstract public void meth2(); 
+     }
+
+     is equals to 
+
+     interface test{
+        void meth1();
+        void meth2(); 
+     }
+
+--> Collection of abstract method
+--> Interfaces are implemented not extended
+--> Meant for runtime polymorphism only
+--> Interface Should be precedded by 'I' eg: ICamera
+--> Interfaces are useful to create callback method
+--> By default all methods are public abstract in interface 
+--> Identifiers are in interface are static and final
+--> If a class implements an interface, it must implement all abstract methods of that interface
+--> Interface can only contain methods without body
+--> But static method can be inside interface with body
+--> method with default access specifier can be inside interface with body/implementation
+--> Method with default access specifier is not require to override in child class
+--> private methods with method body is allowed in interface
+--> Interface can contain varibale but they are always public,static,final
