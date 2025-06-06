@@ -1,0 +1,36 @@
+
+Packages : 
+    - use for organising java project
+    - we can use classes/Interfaces of packages by import it in out application
+    - Or we can use classes/Interfaces of packages by directly use It
+    
+
+    How to create own packages: 
+        using package keyword in first line of program.
+        javac -d . Demo.java --> it will create package 
+                            --> Instead of . ,file path is used
+
+
+      
+Access modifiers : 
+         4 types : 
+            1.public
+            2.private
+            3.protected
+            4.default
+         
+   -->  outer class can only be public or default
+
+   Same class : default, private, protected, public 
+   Same package sub class : default, protected, public
+   Same package non-sub class : default, protected, public
+   Different Package sub class : protected, public
+Different packahe non-sub class : public
+
+
+   SummeryTable : 
+        1. Within same package except private everithing is accessible 
+        2. Private is accessible only inside class
+        3. default Only inside package
+        4. Protected Everywhere except different package non sub class
+        
