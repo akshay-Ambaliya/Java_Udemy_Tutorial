@@ -1,0 +1,80 @@
+
+Types Of Error : 
+
+    1. Syntax Error :
+        -Faced by Programmer
+        -Removed by Compiler
+
+    2. Logical Error : 
+        -Faced by Programmer
+        -Most Difficult Errors
+        -Removed by debugger
+
+    3. Runtime Error : Exception
+        -Faced by User 
+        -causes : Invalid Input
+                : Unavailability of resource
+        -Managed by Programmer Known as Exception Handeling
+ 
+try : 
+    - Throws an exception in the form of object
+
+catch :
+    - used to handel exception 
+    - Always followed by try
+    - There can be more than one catch block for one try block
+    - First Catch must catch sub class before parent class
+
+finally :
+    - finally bloack always executed no matter exception occured or not 
+    - If we are handeling exception then there is no need of finlly block 
+
+
+Built in exception classes heirarchy
+
+Object
+   ^
+   | 
+Throwable - Error
+   ^
+   |   
+Exception
+   ^
+   |
+ClassNotFoundException     -|
+IOException                 |
+InterruptException          | Checked Exception
+NumberFormatException       |
+RuntimeException           -|
+    ^
+    |
+ArithmeticException        -|
+IndexOutOfBoundException    | Unchecked Exception
+NullPointerException       -|
+
+
+Checked Exception : Compiler forces you to handle it
+Unchecked Exception : compiler won't forces you to handle it 
+
+Class Exception Contains following methods : 
+    String getMessage();
+    String toString();
+    void printStackTrace();
+
+    --> Every user defined exception must extends Exception class 
+    for eg : 
+        class MinBalanceException extends Exception
+
+
+Throw vs Throws :
+    Throw : Used to throw exception
+    Throws : Define that method can throw exception
+
+Try with resources : 
+    - WE can create resource at the try statement 
+    eg : try(FileReader f = new FileReader("mytxt"));
+    - Here we don't require finally block it will do clean up process by its own 
+    - It implements AutoClosable interface
+
+Example ex 1
+Example ex 2
