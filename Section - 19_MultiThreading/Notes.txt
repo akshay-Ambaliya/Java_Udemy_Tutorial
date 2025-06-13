@@ -1,0 +1,223 @@
+multiprogramming : Runnins multiple program on single machine
+    -   multi-user  : Mulitiple user uses same device
+                    : Famous OS - UNIX,LINUX
+    -   multitasking : Single use can run more than one application simultaneously
+    -   multithreading :  a thread is a lightweight unit of execution within a program. It allows your program to perform multiple tasks at the same time
+
+
+--> Multithreading can be achieved by
+    - (1) Thread class 
+    - (2) Runnable Interface --> uses Thread class
+
+    - We Must override run method of Thread class
+    - Call start method to run thread
+
+
+Thread LifeCycle / States of a Thread
+
+    1. new : when create object
+    2. ready : when we call start (thread is ready to execute) 
+    3. running : when run method executing (Thead is in execution)
+    4. terminated : when execution completed
+    5. wait : waiting for resources
+    6. timedout : when thread is out of the queue for certain time period
+    7. blocked : waiting to enter synchronized block
+
+Thread Proprities : 
+    - All Threads are sharing CPU time
+    - That's why all thread have their priority 
+    - Thread.MIN_PRIORITY : 1 
+    - Thread.MAX_PRIORITY : 10
+    - Thread.NORM_PRIORITY : 5
+    - Default priority is 5
+    - ususally , JVM scheduler will schedule the thread
+    - but in the case of priority scheduling is done based on priority
+    - But use of priority may give us unexpected output
+
+Synchronization :
+
+    - These Are the therms realetd to synchronization : 
+        (1) Resource sharing : More then one threads want to access same resource
+        (2) Ciritical Section : Line/Piece of code that accessing resources
+        (3) Mutual Exclution : Happening os one thread prevents another threads to access resource
+        (4) Locking/Mutex : A lock (or mutex) allows only one thread at a time to access a shared resource
+        (5) Semaphore : A semaphore is a counter that controls access to a resource, It allows n threads to access a shared resource at the same time.\
+                      : OS manage mutual Exclution
+        (6) Monitor : Ensure only one thread enters critical section and others wait on a condition
+
+    -   Method can be synchronized
+    -   Block of code can be synchronized
+
+InterThread Communication : 
+
+1.  wait()	: Makes thread wait and releases the lock
+2.  wait(time)	: Waits for a specific time or until notified
+3.  notify()	: Wakes one waiting thread
+4.  notifyAll()	: Wakes all waiting threads
+
+Daemon thread: 
+    -   Daemon thread is a background thread having least priority  
+    -   Is is terminated with main method
+    -   Ususally used for clean up task
+
+class MyData{
+    int value = 0;
+    boolean flag=true;
+
+    synchronized void set(int v ){
+        while(flag!=true){
+            wait();
+            value=v;
+            flag=true;
+            notify();
+        }
+    }
+
+    synchronized int get(){
+        int x =0;
+        while(flag!=false){
+            wait();
+            x=value;
+            flag=true;
+            notify();
+            return x; 
+        }
+    }
+}
+
+class Producer extends Threads{
+    MyData d;
+    Producer(Mydata dat){d=dat;}
+
+    public void run(){
+        int i=1;
+        whie(true){
+            d.set(i);
+            sop("Producer : "+ i);
+            i++;
+        }
+    }
+}
+
+class Consumer extends Thread{
+    MyData d;
+    Consumer(MyData dat){
+        d=dat;
+    }
+
+    public void run(){
+        while(true){
+            sop("con" + d.get);
+        }
+    }
+}
+
+
+===========================================================================
+
+package scthread2;
+
+
+
+class WhiteBoard
+{
+    String text;
+    int numberOfStudents=0;
+    int count=0;
+    public void attendance()
+    {
+        numberOfStudents++;
+    }
+    
+    synchronized public void write(String t)
+    {
+        System.out.println("Teacher is Writing " +t);
+        while(count!=0)
+                try{wait();}catch(Exception e){}
+        text=t;
+        count=numberOfStudents;
+        notifyAll();
+
+    }
+    synchronized public String read()
+    {
+        
+        while(count==0)
+                try{wait();}catch(Exception e){}
+            
+        String t=text;
+        count--;
+        if(count==0)
+                notify();
+        return t;
+    }
+    
+}
+class Teacher extends Thread
+{
+    WhiteBoard wb;
+    
+    String notes[]={"Java is language","It is OOPs","It is Platform Independent","It supports Thread","end"};
+    
+    public Teacher(WhiteBoard w)
+    {
+        wb=w;
+    }
+    
+    public void run()
+    {
+        for(int i=0;i<notes.length;i++)
+            wb.write(notes[i]);
+    }          
+    
+}
+
+class Student extends Thread
+{
+    String name;
+    WhiteBoard wb;
+    public Student(String n,WhiteBoard w)
+    {
+        name=n;
+        wb=w;
+    }
+    
+    public void run()
+    {
+        String text;
+        wb.attendance();
+                
+        do
+        {
+            text=wb.read();
+            System.out.println(name + " Reading " + text);
+            System.out.flush();
+        }while(!text.equals("end"));
+    }
+    
+}
+
+
+public class SCThread2 
+{
+    public static void main(String[] args) 
+    {
+        WhiteBoard wb=new WhiteBoard();
+        Teacher t=new Teacher(wb);
+        
+        Student s1=new Student("1. John",wb);
+        Student s2=new Student("2. Ajay",wb);
+        Student s3=new Student("3. Kloob",wb);
+        Student s4=new Student("4. Smith",wb);
+        
+        t.start();
+        
+        s1.start();
+        s2.start();
+        s3.start();
+        s4.start();
+        
+    }   
+}
+
+
