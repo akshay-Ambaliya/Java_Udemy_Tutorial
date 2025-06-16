@@ -1,0 +1,21 @@
+
+Generics :
+    - Before Object class is used for generalization 
+    - But,it is not type safe (type cheking is not done at compile time)
+    - Generics is type safe, It will provide error at compile time
+    - We can make class capable of storing only one object, But object can be of any type
+    - If we don't provide type to generics then it will be of object type
+    - We can also provide multiple parameter 
+    - If class is inherited by another class then sub class should be generics or parameter should be passed to super class 
+    - We can also limit the parameter type like this : 
+      <T extends Number> : this will allow only those classes which are extending from Number class
+    - extends keyword is used for class and interface as well , Note that imeplements is not used 
+    - we can define upperbound for parameter using super keyword means it can only hold the classes which is super class pf parameter class
+
+
+Do's and Don't 
+    - Only extends is allowed in generic class definition
+    - extends is used for interface also 
+    - extends from only one class and multiple interfaces
+    - <?> will accept all types but cannot access
+    - Base type of an Object should be same or ? 

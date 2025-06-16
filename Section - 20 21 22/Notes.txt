@@ -1,0 +1,111 @@
+
+java.lang package
+--> It is an only package by default imported
+
+(1) Object class
+    : parent class of all the class
+    : toString() - used to print object 
+    : hashCode() - provide unique number related to object
+    : equals() - used for reference checking
+    : wait(), notify(), notifyAll() are the final that's why it can't nbe override
+
+(2) Wrapper classes : 
+    In java for every primitives wrappoer class is available in java.lang
+    Number
+      |- Byte
+      |- Short
+      |- Integer
+      |- Long
+      |- Float
+      |- Double
+    Character
+    Boloean
+
+    examples : 
+        Integer i =10;
+        Byte b = Byte.valueOf(10);
+        Short s = short.valueOf("123");
+        Float f = 123.5f;
+        Double d = 123;
+        Charatcer c = Charatcer.valueOf('a');
+        Boolean b = Boolean.valueOf("true");
+
+--> Boxing : making primitive data to object type
+    int a = 5;
+    Integer boxedA = Integer.valueOf(a);  // Boxing
+
+--> Unboxing : making object of primitive data type to primitive
+    Integer boxedB = Integer.valueOf(10);
+    int b = boxedB.intValue();  // Unboxing
+
+--> AutoBoxing : Automatic conversion by the compiler from primitive to wrapper.
+    int x = 100;
+    Integer obj = x;  // Autoboxing
+
+--> AutoUnboxing : Automatic conversion by the compiler from wrapper to primitive.
+    Integer obj = 50;
+    int y = obj;  // Autounboxing
+
+String class : 
+    - immutable
+
+StringBuffer : 
+    - mutable
+    - append()
+    - insert()
+    - by default capacity 16
+    - thread safe (only one thread can access at a time)
+    - slower
+
+StringBuilder 
+    - mutable
+    - same as StringBuffer
+    - Thread Unsafe (more than one thread can access at a time)
+    - faster
+
+Enum : Used for user defined data type
+
+Reflection Package : It provide certain classes that gives details about class 
+    - Class
+    - Field
+    - Method
+    - Constructor
+    - Parameter
+
+Annotation : Annotations are metadata that provide information to the compiler.
+
+    - In-built Annotation 
+        (1) @Override
+        (2) @Depricated
+        (3) @SuppressWarning
+        (4) @SafeVerArgs
+        (5) @FunctionalInterface
+        (6) @Retention
+        (7) @Documented
+        (8) @Target
+        (9) @Inherited
+        (10) @Repeatable
+
+    - User-defined Annotation
+        (1) interface MyAnno{}
+            -can be used at 
+                1. method level
+                2. local variable level
+                3. class level
+                4. parameter level
+            
+        example : 
+            @interface MyAnno{
+                String name();
+                String project();
+                String date() default "today";
+                String version();
+            }
+
+
+Lambda Function : 
+    - Interface with just 1 method is known as functional interface 
+    - Lambda are a way to implement functional interface in a concise & readable way
+    - Lambda Function can have their own variable
+    - It can Access variable of method in which it is defined, but those variable must be final or effectively final 
+    - can also access instance variable

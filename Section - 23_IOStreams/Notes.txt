@@ -1,0 +1,25 @@
+Classes Used In Streams : 
+
+    1. FileInputStream
+    2. FileOutputStream
+    3. FileReader
+    4. FileWriter
+    5. PipedInputStream
+    6. PipedOutputStream
+    7. File
+    8. RandomAccessFile
+    9. BufferedInputStream
+    10. BufferedOutputStream
+    11. BufferedReader
+    12. BufferedWriter
+    13. ByteArrayInputStream
+    14. ByteArrayOutputStream
+    15. CharArrayInputStream
+    16. CharArrayInputStream
+    17. PrintStream
+    18. DataInputStream
+    19. DataOutputStream
+    17. ObjectInputStream
+    18. ObjectOutputStream
+    19. InputStreamReader
+    20. SequenceInputStream
