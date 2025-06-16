@@ -1,0 +1,80 @@
+
+Collection Framework: 
+    It is collectino of data-structures
+    Data can be brought to prgram from various sources
+
+Requirement And Operations : 
+    Array size is fixed so if we want variable sized storage unit then it cannot be used 
+    We must used ArrayList Or LinkedList in such classes
+    Some Requirements are : 
+    - variable Size Collection
+    - Distinct Collection
+    - Sorted Collection
+    - Insert
+    - Delete
+    - Search
+
+All Collection classes and interfaceses : 
+
+Iterable (I)
+--> Collection (I)
+    -->List (Having Index) (I)
+        -->ArrayList
+        -->LinkedList
+        -->Vector - legacyClasses
+        -->Stack - LegacyClasses
+    
+    -->Set (Duplicated Not Allowed) (I)
+        --> SortedSet (I)
+            -->TreeSet
+        --> HashSet
+        --> LinkedHashSet
+    
+    --> Queue - use FIFO manner (I)
+        --> Priority Queue
+        --> Dequeue (I)
+            -->ArrayDequeue
+
+Map (Use Key-value Pair to store Data) (I)
+    --> SortedMap (I)
+        -->TreeMap
+    --> HashMap
+    --> LinkedHashMap
+    --> HashTable
+
+
+Methods Of Collection Interface :
+    1. add()
+    2. addAll()
+    3. remove()
+    4. removeAll()
+    5. retainAll()
+    6. clear()
+    7. isEmpty()
+    8. contains()
+    9. containsAll()
+    10. equals()
+    11. size()
+    12. iterator()
+    13. toArray()
+
+List Interface : List extends Collection
+    List Represents order collection of element means element have indexes
+    Some methods of list Interface 
+        - .get(int index) 
+        - .set(int index E e)
+        - .sublist(int from,int to)
+        - .listIterator()
+        - .listIterator(int index)
+        - .indexdOf(Object o)
+        - .lastIndexOf(Object o)
+
+Set Interface : Set extends Collection
+Queue Interface : Queue extends Collection
+    - Manage Elements in FIFO manner 
+    - Some methods of set queue interface
+        - .add(E e)
+        - .poll()
+        - .remove() throws NoSuchElementException
+        - .peek()
+        - .element() throws NoSuchElementException

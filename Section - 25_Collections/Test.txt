@@ -1,0 +1,5 @@
+#Car Details : 
+#Tue Jun 17 19:48:21 IST 2025
+Color=Red
+Company=Tata
+Model=Nano
