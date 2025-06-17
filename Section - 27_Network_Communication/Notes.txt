@@ -1,0 +1,23 @@
+
+Network Communication
+- In order to communicate within network several models are there 
+
+
+First Model Is OSI model : 
+    - It is represented in the form of layers
+    - Sends Data in packets
+1) Application -user interaction
+2) Presentation - encryption/decryption
+3) Session - deals with Time-Period
+4) Transport - Ensures reliable Delivery
+5) Network - Routing using ID
+6) DataLink - Data transmission , error detection
+7) Physical - Physical Medium
+
+Second Model is TCP/IP
+
+    1) Application - HTTP , FTP , SMTP , POP
+    2) Transport - TCP/UDP
+    3) Network - IPv4,IPv6
+    4) NetworkAccess - Enthernet
+    
