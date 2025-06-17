@@ -1,0 +1,139 @@
+
+Database : 
+
+JDBC : Java Database Connectivity
+Famous DB : Oracle
+          : MySQL
+          : SQLServer
+          : SQLite
+
+
+(1) Relation : Table in Database
+(2) Schema : Table Desigb/ Schema/ Structure
+(3) Field : Properties/ Attributes
+(4) Record : Row/Tuple
+(5) Primary Key : unique and null Attributes
+(6) RelationShip : Link between two table
+(7) ForeignKey : Field in one table is primary key in another table
+(8) Contraints : Rules or condition that restrict how data is entered.
+
+
+--> DDL
+    - CREATE
+    - DROP
+    - ALTER
+    - TRUNCATE
+    - RENAME
+
+--> DML
+    - INSERT
+    - DELETE
+    - UPDATE
+
+--> Query / Data retrieval language
+    - SELECT
+    - FROM
+    - WHERE
+
+--> Datatypes in mysql : 
+    - NULL
+    - INTEGER
+    - REAL/FLOAT/NUMERIC
+    - TEXT/CHAR/VARCHAR
+    - BLOB
+
+--> How to create table
+
+    create table dept(
+        deptno INTEGER primary key,
+        dname TEXT
+    );
+
+    create table student(
+        roll INTEGER primary key,
+        name TEXT,
+        city TEXT,
+        deptno interger,
+        foreign key (deptno) references dept(deptno)
+    );
+
+--> How to insert Record
+
+    insert into dept values(10,'CSE');
+    insert into dept values(20,'ECE');
+    insert into dept values(30,'CIVIL');
+    insert into dept values(40,'MECH');
+    insert into dept values(50,''CHEM);
+
+--> Query Lnguage / Data retrieval language
+
+    - SELECT
+    - FROM
+    - JOIN
+    - WHERE
+    - ORDER BY
+    - GROUP BY
+    - DISTINCT
+    - LIKE
+    - BETWEEN
+    - IN
+    - JOIN : used to retrieve data from multiple table
+    - HAVING : impose condition upon group
+
+--> Some Queries are 
+
+    - Select * from students order by city desc;
+    - select * from students,dept;
+    - select * from Student ,dept where student.deptno = dept.deptno;
+    - select * from student join dept on students.deptno = dept.deptno;
+    - select * from student S join dept D on S.deptno = D.deptno;
+    - Select city from student group by city;
+    - select count(*), city from students group by city.
+
+--> Aggregate Function
+
+    (1) count : select count(name) from students;
+              : select count(distinct name) from student;
+            
+    (2) max   : select max(roll) from student;
+
+    (3) sum   : select sum(roll) from student;
+
+    (4) avg   : select avg(roll) from student;
+
+--> Set Operation : 
+
+    Union : select * from students where city='Delhi' Union select * from students where city = 'Mumbai';
+    Intersect : select * from students where city='Delhi' Intersect select * from students where city = 'Mumbai';
+    Except : select * from students where city='Delhi' Union Except * from students where city = 'Mumbai';
+
+--> Sub Queries : 
+
+    Select * from student where city in (select city from student where name='Ajay');
+    Select * from students where deptno = (select deptno from student where name='Ajay');
+    Select * from students where roll >  (select deptno from student where name='Suraj');
+    Select * from students where roll >  (select avg(roll) from student);
+
+--> DML 
+
+    Update dept set dname = 'Aero' where deptno = 50;
+
+    Delete from dept where dname = 'EEE';
+
+Types OIf JDBC Driver
+
+(1) Type 1 : JDBC-ODBC bridge Driver
+(2) Type 2 : Native Driver
+(3) Type 3 : Java-Net Protocol Driver
+(4) Type 4 : Thin Driver (pure)
+
+Steps to use database 
+
+    1. Use Driver
+    2. Establish Connection
+    3. Create Statement
+    4. Execute Query
+    5. Get ResultSet
+
+
+
