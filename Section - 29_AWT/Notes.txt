@@ -1,0 +1,49 @@
+
+
+User Can communicate with device in two ways : 
+1) GUI : Graphical User Interface
+2) CUI : Character User Interface
+
+In java we can achieve GUI functionality using 3 framework
+
+1) AWT : Abstract Window Toolkit
+2) Swings 
+3) JavaFX
+
+There Some component Classes Are there 
+1. Button
+2. CheckBox
+3. CheckBoxGroup
+4. List
+5. Choice
+6. TextField
+7. TextArea
+8. ScrollBar
+9. Layouts 
+    - FlowLayout
+    - BorderLayout
+    - GridLayout
+    - GridBagLayout
+    - CardLayout
+10. MenuBar
+11. Menu
+12. MeunItems
+13 CheckBoxMenuItem
+
+Every Component have its own 
+    - properties : 
+    - method : 
+    - Events : Every component Generate Events and to handel those event we require Event Listener interfaces
+             : Some Events Are 
+                -   ActionEvent :  ActinoListener
+                -   ItemEvent : ItemListener
+                -   MouseEvent : MouseListener/MouseMotionListener
+                -   KeyEvent : KeyListener
+                -   AdjustmentEvent : AdjustmentListener
+                -   WindowEvent : WindowListener
+                -   TextEvent : TextListener
+
+    - Listener May have more than 1 method in interface so overriding every listener's method make code very complex
+    - That's why Adapter Is there 
+
+Adapter : Every Adapter have all the method present in its listener but it is class so that if we don't override every method then it's fine
