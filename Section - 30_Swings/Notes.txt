@@ -1,0 +1,38 @@
+
+difference between AWT vs Swings
+
+AWT :                           Swings : 
+
+Plateform Dependent             Plateforme Independent
+Heavy Weight                    Light Weight
+Few Components                  Many Components
+Host Look&Feel                  Pluggable Look And Feel
+No MVC                          Supports MVC
+
+Some Components Of Swings : 
+
+    - JButton
+    - JLabel
+    - ImageIcon
+    - JTextField
+    - JformatterTextField
+    - JTextArea
+    - JCheckBox
+    - JRadioButton
+    - JPanel
+    - Border
+    - JTree
+    - DefaultMutableTreeNode
+    - JScrollPane
+    - ButtonGroup
+    - JLayeredPane
+    - InternalFrame
+    - JFrame 
+    - JDesktopPane
+    - JSplitePane
+    - JTabbedPane
+    - JProgressBar
+    - JSlider
+    - JToolBar
+    - JFileChooser
+    - JColorChooser
